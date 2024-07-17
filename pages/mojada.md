@@ -8,12 +8,14 @@ permalink: mojada.html
 
 "There is no sign, no line, no welcome. We are in the other America."— Luis Alfaro, *Mojada*
 
+<br>
 
 ## Plot
 
 In Luis' Alfaro's play Mojada, Medea, her husband Hason (Jason), their son Acan, and Tita (nurse), a woman who is a servant for Medea’s family have fled from Mexico to America due to tragic circumstances, and  have settled in Los Angeles. Living already for a year in Los Angeles (when the play opens), Medea finds it hard to assimilate being undocumented and traumatized by their flee. She stays at home sewing whereas Hason is eager to become a member of their new world. He soon advances from a day-labor worker to a contractor’s assistant who works long hours and is not home frequently. He eventually engages in a relationship with his boss, Armida (played by Marlene Forte), also an immigrant, but with a much less traumatic journey to America. The plot line is very close to Euripides' tragedy but Alfaro twists it in such a way that renders Medea's ancient story a stepping-stone to talk about the experience of Mexican immigrants in Los Angeles.
 
 <img src="https://static01.nyt.com/images/2019/07/17/arts/17mojada-1/17mojada-1-videoSixteenByNineJumbo1600.jpg" width="70%">
+
 
 <br>
 
