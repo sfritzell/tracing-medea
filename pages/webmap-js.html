@@ -1,0 +1,206 @@
+---
+title: Webmap JS
+permalink: /webmap-js.html
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medea On the World Stage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- To avoid unwanted scaling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <!-- leaflet stylesheet -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        .descrip {
+            width: 250px;
+            font-size: 16px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+            padding: 10px 14px;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            border: 5px solid #D3D3D3;
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 1000;
+            /* Ensure it's above the map */
+        }
+
+        .descrip.visible {
+            display: block;
+        }
+
+        .trigger-zone {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            z-index: 1000;
+        }
+
+        .americas {
+            filter: hue-rotate(0deg);
+            /*blue*/
+        }
+
+        .europe {
+            filter: hue-rotate(180deg);
+            /*brown*/
+        }
+      
+        }
+        /* these colors can be changed by changing the number in the hue-rotate(), there must be no spaces between the number and deg, for more options see: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images */
+    .leaflet-tile {
+            background-color: transparent !important;
+        }
+    /*setting background to transparent for all layers*/
+    </style>
+
+
+</head>
+
+<body>
+    <div id="map"></div>
+    <div class="trigger-zone"></div>
+    <!-- Include Leaflet library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet@3.0.4/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@3.0.0/dist/esri-leaflet-vector.js"></script>
+    <script src="{{ '/assets/lib/leaflet/leaflet.markercluster.js' | relative_url }}"></script>
+    <script>
+
+        // Initialize the map
+        var map = L.map("map", {
+            center: [0, 0],
+            zoom: 5
+        });
+       
+      //base map
+        const openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+    
+        var data = {{ site.data.Test-Medea-DataSet | jsonify }};
+
+        //console.log("Data loaded:", data);
+
+        // Function to add GeoJSON data to respective layers
+        function addDataToLayers(data) {
+            data.forEach(function (feature) {
+                // Check if required fields (subject, latitude, longitude) are present and not empty
+                if (feature.region && feature.lat && feature.long &&
+                    feature.region.trim() !== "" && feature.lat.trim() !== "" && feature.long.trim() !== "") {
+
+                    var geojsonFeature = {
+                        type: "Feature",
+                        properties: {
+                            title: feature.play-title || "Unknown",
+                            author: feature.playwright || "Unknown",
+                            country: feature.country || "Unknown",
+                            date: feature.date || "Unknown",
+                            region: feature.region,
+                            summary: feature.summary || "No description provided"
+                        },
+                        geometry: {
+                            type: "Point",
+                            coordinates: [parseFloat(feature.lat), parseFloat(feature.long)]
+                        }
+                    };
+
+                    console.log("Processing feature:", geojsonFeature);
+
+                    var subject = feature.region.toLowerCase();
+                    if (subject === 'other') {
+                        otherLayer.addData(geojsonFeature);
+                    } else if (subject === 'europe') {
+                        europeLayer.addData(geojsonFeature);
+                    } else if (subject === 'americas') {
+                        americasLayer.addData(geojsonFeature);
+                    } else if (subject === 'unknown') {
+                        unknownLayer.addData(geojsonFeature);
+                    } else {
+                        console.warn("Unexpected subject:", subject);
+                        unknownLayer.addData(geojsonFeature); // Add to the unknown layer
+                    }
+                } else {
+                    console.warn("Feature missing required fields (subject, latitude, or longitude):", feature);
+                }
+            });
+        }
+
+        // Define layers with popup content
+        function createLayer(className, customIcon) {
+            return L.geoJSON(null, {
+                pointToLayer: function (feature, latlng) {
+                    var marker = L.marker(latlng, { icon: customIcon || L.Icon.Default.prototype });
+                    marker.on('add', function () {
+                        marker._icon.classList.add(className);
+                    });
+                    return marker;
+                },
+                onEachFeature: function (feature, layer) {
+                    if (feature.properties) {
+                        var popupContent = '<h3>' + feature.properties.title + '</h3>' +
+                            '<p><b>Address:</b> ' + feature.properties.author + '</p>' +
+                            '<p><b>Description:</b> ' + feature.properties.summary + '</p>' +
+                            '<p><b>Year:</b> ' + feature.properties.date + '</p>';
+                        layer.bindPopup(popupContent);
+                    } else {
+                        console.warn("Feature missing properties:", feature);
+                    }
+                }
+            })
+        }
+
+
+        var unknownLayer = createLayer('unknown');
+        var otherLayer = createLayer('other');
+        var europeLayer = createLayer('Europe');
+        var americasLayer = createLayer('Americas');
+
+
+
+        //Add layers to map
+        unknownLayer.addTo(map);
+        otherLayer.addTo(map);
+        europeLayer.addTo(map);
+        americasLayer.addTo(map);
+
+
+      //layers control
+        var overlayLayers = {
+            "Americas": americasLayer,
+            "Europe": europeLayer,
+            "Unknown": unknownLayer,
+            "otherLayer": otherlayer
+        };
+
+        L.control.layers(baseLayers, overlayLayers).addTo(map);
+
+        // Call function to add data to layers
+        addDataToLayers(data);
+
+    </script>
+</body>
+
+</html>
