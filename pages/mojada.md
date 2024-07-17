@@ -13,6 +13,7 @@ permalink: mojada.html
 In Luis' Alfaro's play Mojada, Medea, her husband Hason (Jason), their son Acan, and Tita (nurse), a woman who is a servant for Medea’s family have fled from Mexico to America due to tragic circumstances, and  have settled in Los Angeles. Living already for a year in Los Angeles (when the play opens), Medea finds it hard to assimilate being undocumented and traumatized by their flee. She stays at home sewing whereas Hason is eager to become a member of their new world. He soon advances from a day-labor worker to a contractor’s assistant who works long hours and is not home frequently. He eventually engages in a relationship with his boss, Armida (played by Marlene Forte), also an immigrant, but with a much less traumatic journey to America. The plot line is very close to Euripides' tragedy but Alfaro twists it in such a way that renders Medea's ancient story a stepping-stone to talk about the experience of Mexican immigrants in Los Angeles.
 
 <img src="https://static01.nyt.com/images/2019/07/17/arts/17mojada-1/17mojada-1-videoSixteenByNineJumbo1600.jpg" width="70%">
+<br>
 
 ## Luis Alfaro: Writing for the Community
 
@@ -24,6 +25,7 @@ These two questions lie at the core of Alfaro's Greek trilogy (*Electridad*, *Oe
 
 **"I call myself a citizen artist, because one of the things I do is try to get my playwrights — especially my graduate playwrights — interested in the world. It’s about how you connect art to culture and community here and now, and how we are vital to the expression of our community." — Luis Alfaro**, [*The Artist as Leader: Luis Alfaro*](https://www.uncsa.edu/kenan/artist-as-leader/luis-alfaro.aspx)
 
+<br>
 
 ## Medea the Immigrant
 
@@ -41,6 +43,7 @@ In the framework of the fifth century Athenian society, Jason's betrayal and mar
 
 Similarly in Mojada, when Hason marries Armida and she announces that they are taking with them Acan and Tita, Medea is left all alone threatened to be taken to court and be deported. From the beginning of the play, Euripides' Medea finds herself in a critical situation because of the circumstances of her departure from Colchis which are now combined with Jason's marriage to the princess. Medea is in "a state of utter isolation, epitomized by her exile decreed by Creon" (Hopman, 2008). Likewise, Alfaro's Medea lives in near isolation deeply attached to her Mexican values refusing to assimilate. This emphasis on the state of isolation and "foreigness" of both Medeas accentuates both Euripides' and Alfaro's critique of the status of the 'other' within a society.
 
+<br>
 
 ## The Relevant Medea: Mexican Immigrants in Los Angeles
 
@@ -52,6 +55,7 @@ When Luis Alfaro started "revisiting" Euripides' play in 2013, he was encouraged
 
 **"Alfaro is writing about immigrants and their assimilation, or lack thereof, and the pressures the dominant white culture exerts on their choices." —  Deborah Klugman**
 
+<br>
 
 ## Sources
 
