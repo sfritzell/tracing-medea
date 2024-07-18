@@ -148,8 +148,7 @@
         }  
         
         /* create popup content */
-        var popupTemplate = '<h2 class="h4">' +
-            feature.properties.title + '</h2><div class="text-center"><img class="mapthumb img-thumb" src="' +  thumbSrc + '" alt="item thumbnail"></div><p>';
+        var popupTemplate = '<h2 class="h4"><a href="' + feature.properties.filename + '">' + feature.properties.title + '</a></h2><div class="text-center"><img class="mapthumb img-thumb" src="' +  thumbSrc + '" alt="item thumbnail"></div><p>';
         /* add metadata fields */
         {% for f in fields %}{% if f.display_name %}
         if (feature.properties[{{ f.field | jsonify }}]) {
