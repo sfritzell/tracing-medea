@@ -4,90 +4,90 @@
 
 ## Adding a new play page
 
--To add a new play page start at the repository home page. Navigate to the pages folder and create a new file. In the file name, use the convention of **title-authorlastname.md**
--Don’t use capital letters or spaces. 
+- To add a new play page start at the repository home page. Navigate to the pages folder and create a new file. In the file name, use the convention of **title-authorlastname.md**
+- Don’t use capital letters or spaces. 
 For example, to create the page for Mojada by Luis Alfaro I went to the pages folder and created a new file named **mojada-alfaro.md**
 By the Bog of Cats by Marina Carr would be: **bythebogofcats-carr.md**
 
 ## Adding new content to a play page
 
--When adding content to the page, follow the template play page (sample-play-page.md). **Replace the headings while leaving the code and YAML header in place.** The yaml header is encased inside the three hash marks
--Go to the YAML header and replace “Sample Play Page” with the name of the play. Leave the layout the same.
+- When adding content to the page, follow the template play page (sample-play-page.md). **Replace the headings while leaving the code and YAML header in place.** The yaml header is encased inside the three hash marks
+- Go to the YAML header and replace “Sample Play Page” with the name of the play. Leave the layout the same.
 
--Next, add a line underneath layout. In that line write <font color="green">**permalink: filename.html**</font>
--When you’re finished, it should look like this. 
+- Next, add a line underneath layout. In that line write <font color="green">**permalink: filename.html**</font>
+- When you’re finished, it should look like this. 
 
 This is the link to this play page.
 
 
 ## Adding images and embedded video to play page
--**To add single images** to the page you will need to use the following syntax: 
+- **To add single images** to the page you will need to use the following syntax: 
 {% include feature/image.html objectid="image_url" width="75" alt="Alt_text" caption="caption"%}
--For **online images** the image url can be found by right clicking on the image you want and selecting “copy image address” from the menu.
+- For **online images** the image url can be found by right clicking on the image you want and selecting “copy image address” from the menu.
 
--Replace image_url with the URL you copied, but keep the quotes
--Replace the Alt_text with the alt text you have written
--Remember for both linked and embedded images to **write meaningful alt text that describes the image in the context of the page**.
--Replace the “caption” with the caption of the image, using the standards laid out below.
--To add **local images**, they must first be uploaded to the **img** folder which is inside the **assets** folder. 
--After they are uploaded, to link to the image in the Markdown for the play page, use the same syntax as with online images. 
+- Replace image_url with the URL you copied, but keep the quotes
+- Replace the Alt_text with the alt text you have written
+- Remember for both linked and embedded images to **write meaningful alt text that describes the image in the context of the page**.
+- Replace the “caption” with the caption of the image, using the standards laid out below.
+- To add **local images**, they must first be uploaded to the **img** folder which is inside the **assets** folder. 
+- After they are uploaded, to link to the image in the Markdown for the play page, use the same syntax as with online images. 
 This time, the image url is the file path within Github, called a relative link. So if I want to input the home page banner into a play page I will enter in the file path to the image
 /assets/img/homepage-banner.jpg
 So the entire command would look like this: {% include feature/image.html objectid="/assets/img/homepage-banner.jpg" width="75" alt="A collage of adaptations of Medea" caption="Homepage Banner"%}
 (The banner may not be the best to do captions on, but this is just to present the syntax.)
--Commit your changes and wait for them to appear. 
+- Commit your changes and wait for them to appear. 
 
 **Adding embedded YouTube videos**
 To embed a Youtube Video into a play page the following syntax can be copy-pasted with two modifications. 
--{% include feature/video.html objectid="youtube_url" width="50" caption="youtube caption" %}
--Replace youtube_url with the link to your video, but leave the quotes. The link can be found by either right clicking on the video itself and selecting “copy video url” or clicking share and copying the url from there. (Don’t use the embed option, it just breaks things!)
+- {% include feature/video.html objectid="youtube_url" width="50" caption="youtube caption" %}
+- Replace youtube_url with the link to your video, but leave the quotes. The link can be found by either right clicking on the video itself and selecting “copy video url” or clicking share and copying the url from there. (Don’t use the embed option, it just breaks things!)
  
 
--Then change the caption, following the caption guide below.
--Be patient after you commit the changes.  This can take a while.
+- Then change the caption, following the caption guide below.
+- Be patient after you commit the changes.  This can take a while.
 ### Multiple Images (side by side)
 To **add multiple images**, you need need the following syntax template 
--{% include feature/image.html objectid="firstimage_url;secondimage_url" caption="caption1;caption2" link="linktosource1;linktosource2" alt="alt-text1;alt-2" %}
--Replace the image urls with the new ones, preserving the quotes and **semicolons**. 
--Replace the captions in the same manner
+- {% include feature/image.html objectid="firstimage_url;secondimage_url" caption="caption1;caption2" link="linktosource1;linktosource2" alt="alt-text1;alt-2" %}
+- Replace the image urls with the new ones, preserving the quotes and **semicolons**. 
+- Replace the captions in the same manner
 The link section allows the image itself to link to the original source, so if I took a picture off the New York Times, clicking on the image would take me to the New York Times website. 
 I think you can do this on the single images as well, using similar syntax, but I haven’t tried it yet.
--Replace the links as needed (if the images are local and you can’t find the source try a reverse google image search) 
--Replace the alt text placeholders with the correct alt text, following the style guidelines. 
--Commit. Wait. 
+- Replace the links as needed (if the images are local and you can’t find the source try a reverse google image search) 
+- Replace the alt text placeholders with the correct alt text, following the style guidelines. 
+- Commit. Wait. 
 You can add more than two images by simply putting a semicolon and the correct information after the second url/alt/caption/link.  
 ## Adding link to the new play page
--To **link the new play page** to the regional page or anywhere else you use similar syntax to linking in images. 
+- To **link the new play page** to the regional page or anywhere else you use similar syntax to linking in images. 
 [play title](filename)
--Mojada’s link on the Americas’ page looks like this: 
+- Mojada’s link on the Americas’ page looks like this: 
 
--This gives you a hyperlink that appears like this: 
+- This gives you a hyperlink that appears like this: 
 
--By the Bog of Cats would be linked like this: 
--[By the Bog of Cats](bythebogofcats-carr)
+- By the Bog of Cats would be linked like this: 
+- [By the Bog of Cats](bythebogofcats-carr)
 
 
 ## Adding captions to images and videos
 The captions for images and videos should not be the same as the alt text (for images) or the title of the video.  A succinct statement, connected to the production, suffices.  For example
--Scene from Alfaro’s Mojada production, Los Angeles, 2012
--Interview of Alfaro, with name of interviewer
+- Scene from Alfaro’s Mojada production, Los Angeles, 2012
+- Interview of Alfaro, with name of interviewer
 
 ## Adding new play to csv file so that it shows up on map
 
 To add a new play to the map, enter information in the play-demo-metadata.csv, housed in _data
 
 ### Required fields relevant to the map pop-up are
--objectID - format is play###.  Determine what the next number in sequence is
--filename - format:  full URL of image source
--title - format:  text, name of the play
--creator - format:  text, name of the playwright
--date - format:  numeric, date of publication or first performance
--description - format:  text, very short description of key point about play
--location - format:  text, region, e.g. Europe, America, Australia
--city-country - format:  text, name of city and country (for US, this often becomes city and state)
--latitude - format:  text, number of latitude, retrieved from Open Street Map
--longitude - format:  text, number of longitude, retrieved from Open Street Map
--On the pop up, we have a subject line.  Its content is determined by indicating TRUE for any and all identities you want to display on the popup.  These start at column Q
+- objectID - format is play###.  Determine what the next number in sequence is
+- filename - format:  full URL of image source
+- title - format:  text, name of the play
+- creator - format:  text, name of the playwright
+- date - format:  numeric, date of publication or first performance
+- description - format:  text, very short description of key point about play
+- location - format:  text, region, e.g. Europe, America, Australia
+- city-country - format:  text, name of city and country (for US, this often becomes city and state)
+- latitude - format:  text, number of latitude, retrieved from Open Street Map
+- longitude - format:  text, number of longitude, retrieved from Open Street Map
+- On the pop up, we have a subject line.  Its content is determined by indicating TRUE for any and all identities you want to display on the popup.  These start at column Q
 
 For more details see
 https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/
