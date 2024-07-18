@@ -1,5 +1,5 @@
 field,display_name,search
-creator,Playwright,true
-date,Date,true
-description,Summary,true
-city-country,Location,true
+creator,Playwright,
+date,Date,
+description,Summary,
+city-country,Location,

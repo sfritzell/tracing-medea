@@ -24,7 +24,7 @@
     { "type":"Feature", "geometry":{ "type":"Point", "coordinates":[{{ item.longitude | strip }},{{ item.latitude | strip }}] }, "properties":
     { "title": {{ item.title | jsonify }}, 
     {% for f in fields %}{{ f.field | jsonify }}: {{ item[f.field] | jsonify }},{% endfor %}{% if item.youtubeid %} "youtube": {{ item.youtubeid | jsonify }}, {% endif %}
-    "format": {{ item.format | jsonify }}, {% if  item.filename contains '/' %}"filename": "{{ item.filename }}" {% else %}"filename":{{ '/objects/' | relative_url | append: item.filename | jsonify }}{% endif %}, "link": "{% if item.parentid %}{{ item.parentid }}#{{ item.objectid }}{% else %}{{ item.objectid }}{% endif %}", "id": {{ item.objectid | jsonify }} } }{% unless forloop.last %}, {% endunless %}{% endfor %}
+    "format": {{ item.format | jsonify }}, {% if  item.filename contains '/' %}"filename": "{{ item.filename }}" {% else %}"filename":{{ '/tracing-medea/' | append: item.filename | jsonify }}{% endif %}, "link": "{% if item.parentid %}{{ item.parentid }}#{{ item.objectid }}{% else %}{{ item.objectid }}{% endif %}", "id": {{ item.objectid | jsonify }} } }{% unless forloop.last %}, {% endunless %}{% endfor %}
     ]};
 
     /* check for url parameters and set initial view options */ 
@@ -37,6 +37,7 @@
     var map = L.map('map').setView(mapCenter, mapZoom);
 
     /* add map layer options */
+    /*
     var Esri_WorldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
     });
@@ -47,11 +48,14 @@
     var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
     });
+    */
     var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    });
+    }).addTo(map);
+    
     /* add base map switcher */
+    /*
     var baseMaps = {
         "Esri World StreetMap": Esri_WorldStreetMap,
         "Esri National Geo": Esri_NatGeoWorldMap,
@@ -59,11 +63,15 @@
         "Open Street Map": OpenStreetMap_Mapnik
     };
     L.control.layers(baseMaps).addTo(map);
+    */
+    
     /* load base map */
-    {{ site.data.theme.map-base | default: 'Esri_WorldStreetMap' }}.addTo(map);
+    {{ site.data.theme.map-base | default: 'OpenStreetMap_Mapnik' }}.addTo(map);
 
-    {% if site.data.theme.map-search == true %}
+
+    /* {% if site.data.theme.map-search == true %} */
     /* add leaflet-fusesearch */
+    /*
     var options = {
         title: 'Search Map Items',
         locationholder: 'Search map items...',
@@ -79,7 +87,8 @@
     var searchCtrl = L.control.fuseSearch(options);
     searchCtrl.addTo(map);
     searchCtrl.indexFeatures(geodata.features, {{ fields | where: 'search','true' | map: 'field' | unshift: 'title' | jsonify }});{% endif %}
-
+    */
+    
     /* add fullscreen control */ 
     map.addControl(new L.Control.Fullscreen());
 
@@ -87,14 +96,14 @@
     /* create cluster group */
     var markers = L.markerClusterGroup({ 
         maxClusterRadius: {{ site.data.theme.map-cluster-radius | default: 15 }}, 
-        singleMarkerMode: true,
+        singleMarkerMode: false,
         iconCreateFunction: function(cluster) {
             /* custom icon function, tweak default to add more alt text */
             var childCount = cluster.getChildCount();
             var csize;
-            if (childCount < 10) {
+            if (childCount < 5) {
                 csize = 'small';
-            } else if (childCount < 100) {
+            } else if (childCount < 10) {
                 csize = 'medium';
             } else {
                 csize = 'large';
@@ -110,14 +119,18 @@
         {% if site.data.theme.map-search == true %}
         /* bind feature for search */
         feature.layer = layer;{% endif %}
+       
         /* calculate item link */
-        var itemHref = '{{ "/item.html?id=" | relative_url }}' + feature.properties.link;
+        var itemHref = '{{ relative_url }}' + feature.properties.filename; 
+        
         /* find object thumb based on format */
         var thumbSrc;
         if (feature.properties.youtube) {
             thumbSrc = 'https://img.youtube.com/vi/' +  feature.properties.youtube + '/default.jpg';
-        } else if (feature.properties.format && feature.properties.format.includes("image")) {
-            thumbSrc = feature.properties.filename;
+        } else if (feature.properties.image) {
+            thumbSrc = feature.properties.image;
+
+        /*    
         } else if (feature.properties.format && feature.properties.format.includes("audio")) {
             thumbSrc = '{{ "/assets/lib/icons/" | relative_url }}{{ icons.icon-audio }}.svg';
         } else if (feature.properties.format && feature.properties.format.includes("video")) {
@@ -127,22 +140,27 @@
         } else if (feature.properties.format && feature.properties.format.includes("compound")) {
             thumbSrc = '{{ "/assets/lib/icons/" | relative_url }}{{ icons.icon-compound-object }}.svg';  
         } else if (feature.properties.format && feature.properties.format.includes("multiple")) {
-            thumbSrc = '{{ "/assets/lib/icons/" | relative_url }}{{ icons.icon-multiple }}.svg';        
+            thumbSrc = '{{ "/assets/lib/icons/" | relative_url }}{{ icons.icon-multiple }}.svg';
+        */
+            
         } else {
             thumbSrc = '{{ "/assets/lib/icons/" | relative_url }}{{ icons.icon-default }}.svg';
-        }    
+        }  
+        
         /* create popup content */
-        var popupTemplate = '<h2 class="h4"><a class="text-dark" href="' + itemHref + '">' +
-            feature.properties.title + '</a></h2><div class="text-center"><a href="' + itemHref + 
-            '" ><img class="mapthumb img-thumb" src="' +  thumbSrc + '" alt="item thumbnail"></a></div><p>';
+        var popupTemplate = '<h2 class="h4"><a href="' + itemHref + '">' + feature.properties.title + '</a></h2><div class="text-center"><img class="mapthumb img-thumb" src="' +  thumbSrc + '" alt="item thumbnail"></div><p>';
         /* add metadata fields */
         {% for f in fields %}{% if f.display_name %}
         if (feature.properties[{{ f.field | jsonify }}]) {
             popupTemplate += '<strong>{{ f.display_name }}:</strong> ' + feature.properties[{{ f.field | jsonify }}] + '<br>'; 
         }
         {% endif %}{% endfor %}
+        
         /* add object link button to popup */
+        /*
         popupTemplate += '</p><div class="text-center"><a class="btn btn-light" href="' + itemHref + '" >View Item</a></div>';
+        */
+        
         /* add object popup to map layer */
         layer.bindPopup(popupTemplate);
     }
@@ -159,24 +177,29 @@
         pointToLayer: objectMarkers
     }){% if site.data.theme.map-cluster != true %}.addTo(map);{% else %};
     map.addLayer(markers);{% endif %}
-    
-    {% if site.data.theme.map-cluster == true and site.data.theme.map-search == true %}
+
+    /* {% if site.data.theme.map-cluster == true and site.data.theme.map-search == true %} */
     /* uncluster when search is clicked */
+    /*
     document.querySelector('a.button').addEventListener("click", function() {
         markers.disableClustering();
     });
+    */
+    
     /* recluster when search is closed */
+    /*
     document.querySelector('a.close').addEventListener("click", function() {
         markers.enableClustering();
         document.querySelector('input.search-input').value = "";
     });{% endif %}
+    */
 
-    /* show popup if id in URL query */ 
+    /* show popup if id in URL query */
+    /*
     if (markerFilter != "") {
         {% if site.data.theme.map-cluster == true %}
         markers.eachLayer(layer => {
             if (layer.feature.properties.id === markerFilter) {
-                /* uncluster clusters, then show */ 
                 if (markers.getVisibleParent(layer)["_childCount"]) {
                     markers.getVisibleParent(layer).spiderfy();
                 } 
@@ -191,6 +214,7 @@
         });
         {% endif %}
     }
-
+    */
+    
 })();
 </script>
