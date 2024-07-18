@@ -1,15 +1,15 @@
-#Documentation for GitHub  - simplified
+# Documentation for GitHub  - simplified
 
 Remember to commit your changes and leave a description of your changes in your commit message. :)
 
-##Adding a new play page
+## Adding a new play page
 
 To add a new play page start at the repository home page. Navigate to the pages folder and create a new file. In the file name, use the convention of title-authorlastname.md
 Don’t use capital letters or spaces. 
 For example, to create the page for Mojada by Luis Alfaro I went to the pages folder and created a new file named mojada-alfaro.md
 By the Bog of Cats by Marina Carr would be: bythebogofcats-carr.md
 
-##Adding new content to a play page
+## Adding new content to a play page
 
 When adding content to the page, follow the template play page (sample-play-page.md). Replace the headings while leaving the code and YAML header in place. The yaml header is encased inside the three hash marks
 Go to the YAML header and replace “Sample Play Page” with the name of the play. Leave the layout the same.
@@ -20,7 +20,7 @@ When you’re finished, it should look like this.
 This is the link to this play page
 
 
-##Adding images and embedded video to play page
+## Adding images and embedded video to play page
 To add single images to the page you will need to use the following syntax: 
 {% include feature/image.html objectid="image_url" width="75" alt="Alt_text" caption="caption"%}
 For online images the image url can be found by right clicking on the image you want and selecting “copy image address” from the menu.
@@ -37,7 +37,7 @@ So the entire command would look like this: {% include feature/image.html object
 (The banner may not be the best to do captions on, but this is just to present the syntax.)
 Commit your changes and wait for them to appear. 
 
-##Adding embedded YouTube videos
+## Adding embedded YouTube videos
 To embed a Youtube Video into a play page the following syntax can be copy-pasted with two modifications. 
 {% include feature/video.html objectid="youtube_url" width="50" caption="youtube caption" %}
 Replace youtube_url with the link to your video, but leave the quotes. The link can be found by either right clicking on the video itself and selecting “copy video url” or clicking share and copying the url from there. (Don’t use the embed option, it just breaks things!)
@@ -67,16 +67,16 @@ By the Bog of Cats would be linked like this:
 [By the Bog of Cats](bythebogofcats-carr)
 
 
-##Adding captions to images and videos
+## Adding captions to images and videos
 The captions for images and videos should not be the same as the alt text (for images) or the title of the video.  A succinct statement, connected to the production, suffices.  For example
 Scene from Alfaro’s Mojada production, Los Angeles, 2012
 Interview of Alfaro, with 
 
-##Adding new play to csv file so that it shows up on map
+## Adding new play to csv file so that it shows up on map
 
 To add a new play to the map, enter information in the play-demo-metadata.csv, housed in _data
 
-###Required fields relevant to the map pop-up are
+### Required fields relevant to the map pop-up are
 objectID - format is play###.  Determine what the next number in sequence is
 filename - format:  full URL of image source
 title - format:  text, name of the play
@@ -92,7 +92,7 @@ On the pop up, we have a subject line.  Its content is determined by indicating 
 For more details see
 https://collectionbuilder.github.io/cb-docs/docs/metadata/gh_metadata/
 
-###Optional fields include
+### Optional fields include
 Type: 
 An object’s type distinguishes between types of image, sound, text, etc. using a one- or two-value input. At minimum, the input should contain a value chosen from the DCMI Type Vocabulary. If using a second value, the second value does not need to relate to a controlled vocabulary, but should give further specification of the object type. The two values in a pair should be separated by a semicolon (;). See examples below.
 Example value: Image;StillImage, Image;MovingImage, Text, Sound
@@ -106,7 +106,7 @@ rightsstatement:
 This field is a standardized rights statement, designated in the form of a URI. It should be presented as a creativecommons.org URI or a rightsstatements.org URI.
 Example value: http://rightsstatements.org/vocab/NoC-US/1.0/
 
-##Accessibility
+## Accessibility
 The site aims to adhere to WCAG AA standards, with a focus on 
 Text:  
 Use headings and sub headings consistently.
