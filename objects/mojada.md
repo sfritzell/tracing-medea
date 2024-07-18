@@ -1,6 +1,6 @@
 ---
 title: Mojada
-layout: page
+layout: about
 permalink: mojada.html
 ---
 
