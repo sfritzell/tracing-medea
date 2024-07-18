@@ -13,7 +13,7 @@ By the Bog of Cats by Marina Carr would be: **bythebogofcats-carr.md**
 
 - When adding content to the page, follow the template play page (sample-play-page.md). **Replace the headings while leaving the code and YAML header in place.** The yaml header is encased inside the three hash marks
 - Go to the YAML header and replace “Sample Play Page” with the name of the play. Leave the layout the same.
-{% include feature/image.html objectid="/assets/img/medea_yamlheader.png" alt="title shows Sample Play Page" caption="YAML code change"%}
+
 - Next, add a line underneath layout. In that line write <font color="green">**permalink: filename.html**</font>
 - When you’re finished, it should look like this. 
 
