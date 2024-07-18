@@ -27,7 +27,7 @@ These two questions lie at the core of Alfaro's Greek trilogy (*Electridad*, *Oe
 
 <img src="https://www.uncsa.edu/kenan/img/news/aal-alfaro-banner.jpg" width="100%">
 
-**"I call myself a citizen artist, because one of the things I do is try to get my playwrights — especially my graduate playwrights — interested in the world. It’s about how you connect art to culture and community here and now, and how we are vital to the expression of our community." — Luis Alfaro**, [*The Artist as Leader: Luis Alfaro*](https://www.uncsa.edu/kenan/artist-as-leader/luis-alfaro.aspx)
+>"I call myself a citizen artist, because one of the things I do is try to get my playwrights — especially my graduate playwrights — interested in the world. It’s about how you connect art to culture and community here and now, and how we are vital to the expression of our community." — Luis Alfaro, [*The Artist as Leader: Luis Alfaro*](https://www.uncsa.edu/kenan/artist-as-leader/luis-alfaro.aspx)
 
 <br>
 
@@ -35,15 +35,15 @@ These two questions lie at the core of Alfaro's Greek trilogy (*Electridad*, *Oe
 
 Euripides' Medea is not from Greece. She is an outsider, an immigrant who struggles to find her place in the Corinthian society just like Alfaro's Medea, and many immigrants across the world. Euripides' Medea is a barbarian, a foreigner in Corinth, without a paternal family or home to return to since she killed her brother.  
 
-**"Medea: But your story and mine are not the same: you have a city and a father’s house, the enjoyment of life and the company of friends, while I, without relatives or city, am suffering outrage from my husband. I was carried off as booty from a foreign land and have no mother, no brother, no kinsman to shelter me from this calamity." - Euripides, *Medea* 252-258** 
+>"Medea: But your story and mine are not the same: you have a city and a father’s house, the enjoyment of life and the company of friends, while I, without relatives or city, am suffering outrage from my husband. I was carried off as booty from a foreign land and have no mother, no brother, no kinsman to shelter me from this calamity." - Euripides, *Medea* 252-258
 
 Alfaro's Medea followed Hason (with whom she is not officially married) in his pursuit of the American dream and the chance to seize the good life in Los Angles.But like Euripides' protagonist, she lives almost isolated being an undocumented immigrant in a place she does not feel that she belongs.
 
-**"Medea: I am pathetic. I am a wetback, una mojada." - Luis Alfaro, *Mojada***
+>"Medea: I am pathetic. I am a wetback, una mojada." - Luis Alfaro, *Mojada*
 
 In the framework of the fifth century Athenian society, Jason's betrayal and marriage to the princess of Corinth leaves Medea with no formal status as women were completely dependent on their husbands or fathers. Medea is now facing ostracization and abandonment, the loss of her children, and the perilous state of being an unmarried foreign woman.
 
-**"Medea: In my case, however, this sudden blow that has struck me has destroyed my life. I am undone, I have resigned all joy in life, and I want to die. For the man in whom all I had was bound up, as I well know—my husband—has proved the basest of men." - Euripides, *Medea* 225-229**
+>"Medea: In my case, however, this sudden blow that has struck me has destroyed my life. I am undone, I have resigned all joy in life, and I want to die. For the man in whom all I had was bound up, as I well know—my husband—has proved the basest of men." - Euripides, *Medea* 225-229
 
 Similarly in Mojada, when Hason marries Armida and she announces that they are taking with them Acan and Tita, Medea is left all alone threatened to be taken to court and be deported. From the beginning of the play, Euripides' Medea finds herself in a critical situation because of the circumstances of her departure from Colchis which are now combined with Jason's marriage to the princess. Medea is in "a state of utter isolation, epitomized by her exile decreed by Creon" (Hopman, 2008). Likewise, Alfaro's Medea lives in near isolation deeply attached to her Mexican values refusing to assimilate. This emphasis on the state of isolation and "foreigness" of both Medeas accentuates both Euripides' and Alfaro's critique of the status of the 'other' within a society.
 
@@ -55,9 +55,9 @@ When Luis Alfaro started "revisiting" Euripides' play in 2013, he was encouraged
 
 <img src="https://www.pcs.org/assets/Mojada_Banner_750.jpg" width="100%">
 
-**"On the contrary, he (Euripides) seems to exploit the theme of Medea's foreignness in order to emphasize her vulnerability and isolation and also to make a searching analysis of the nature of civilization and barbarism, a deep preoccupation of this play..." — P.E. Easterling**
+>"On the contrary, he (Euripides) seems to exploit the theme of Medea's foreignness in order to emphasize her vulnerability and isolation and also to make a searching analysis of the nature of civilization and barbarism, a deep preoccupation of this play..." — P.E. Easterling
 
-**"Alfaro is writing about immigrants and their assimilation, or lack thereof, and the pressures the dominant white culture exerts on their choices." —  Deborah Klugman**
+>"Alfaro is writing about immigrants and their assimilation, or lack thereof, and the pressures the dominant white culture exerts on their choices." —  Deborah Klugman
 
 <br>
 
