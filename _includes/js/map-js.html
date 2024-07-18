@@ -121,7 +121,7 @@
         feature.layer = layer;{% endif %}
        
         /* calculate item link */
-        var itemHref = '{{ "/pages" | relative_url }}' + feature.properties.filename;
+        var itemHref = '{{ site.baseurl }}/pages' + feature.properties.filename;
         
         /* find object thumb based on format */
         var thumbSrc;
