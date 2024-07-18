@@ -14,7 +14,7 @@ permalink: mojada-alfaro.html
 
 In Luis' Alfaro's play Mojada, Medea, her husband Hason (Jason), their son Acan, and Tita (nurse), a woman who is a servant for Medea’s family have fled from Mexico to America due to tragic circumstances, and  have settled in Los Angeles. Living already for a year in Los Angeles (when the play opens), Medea finds it hard to assimilate being undocumented and traumatized by their flee. She stays at home sewing whereas Hason is eager to become a member of their new world. He soon advances from a day-labor worker to a contractor’s assistant who works long hours and is not home frequently. He eventually engages in a relationship with his boss, Armida (played by Marlene Forte), also an immigrant, but with a much less traumatic journey to America. The plot line is very close to Euripides' tragedy but Alfaro twists it in such a way that renders Medea's ancient story a stepping-stone to talk about the experience of Mexican immigrants in Los Angeles.
 
-<img src="https://static01.nyt.com/images/2019/07/17/arts/17mojada-1/17mojada-1-videoSixteenByNineJumbo1600.jpg" width="100%">
+<img src="https://static01.nyt.com/images/2019/07/17/arts/17mojada-1/17mojada-1-videoSixteenByNineJumbo1600.jpg" width="100%" alt="On a dark stage, 4 people cower, with a man standing over them.  All look towards a blinding light with anticipation and concern as they see the end of their immigration journey.">
 
 
 <br>
@@ -25,7 +25,7 @@ Luis Alfaro, a Chicano writer, theater director, and social activist was born in
 
 These two questions lie at the core of Alfaro's Greek trilogy (*Electridad*, *Oedipus el Rey*, and *Mojada*) which sets mythic stories in a contemporary background and sheds a heroic/mythic light to 21st century Latino figures. His latest Greek-inspired play, Mojada, is a re-imagining of Euripides' Medea in which the protagonist is a young indigenous seamstress from Mexico who followed Jason across the border to the other America. Alfaro has claimed that "Medea may be the hardest Greek tragedy for modern audiences to understand" and thus he tried to make it more accessible to the contemporary immigrant-Mexican and American spectator. 
 
-<img src="https://www.uncsa.edu/kenan/img/news/aal-alfaro-banner.jpg" width="100%">
+{% include feature/video.html objectid="https://www.youtube.com/watch?v=rQO4TfeMrwE" width="50" caption="Greeks in the Barrio - A Conversation with Luis Alfaro" %}
 
 >"I call myself a citizen artist, because one of the things I do is try to get my playwrights — especially my graduate playwrights — interested in the world. It’s about how you connect art to culture and community here and now, and how we are vital to the expression of our community." — Luis Alfaro, [*The Artist as Leader: Luis Alfaro*](https://www.uncsa.edu/kenan/artist-as-leader/luis-alfaro.aspx)
 
@@ -53,7 +53,8 @@ Similarly in Mojada, when Hason marries Armida and she announces that they are t
 
 When Luis Alfaro started "revisiting" Euripides' play in 2013, he was encouraged by Chay Yew, director of Mojada's production at the Public Theater to gather stories from undocumented immigrants to make Medea's story more fathomable, relatable, and relevant to the experiences of immigrant communities in the United States (especially the Mexican ones), and to better contextualize Medea's journey in modern-day America. The Colchian Medea, who immigrated to Corinth following Jason, became in Los Angeles, a heavily culturally Mexican city whose immigration population is largely comprised of Mexican immigrants, a Mexican woman driven by her struggle between home and the new land, tradition and assimilation, haunted by the cost of coming to a country that exploits her labor but rejects her culture. Euripides' Medea brought on the fifth-century Athenian stage a foreigner woman who voiced the hardship of the social status of females, foreigners/non-citizens, and outsiders; Alfaro's Mojada is a 21st century retelling of the similar hardships that Mexican immigrants face in the United States.
 
-<img src="https://www.pcs.org/assets/Mojada_Banner_750.jpg" width="100%">
+<img src="https://www.pcs.org/assets/Mojada_Banner_750.jpg" width="100%" alt="Three women on stage, the youngest one in front center holding high two banana leaves, the older women looking at her from behind.">
+
 
 >"On the contrary, he (Euripides) seems to exploit the theme of Medea's foreignness in order to emphasize her vulnerability and isolation and also to make a searching analysis of the nature of civilization and barbarism, a deep preoccupation of this play..." — P.E. Easterling
 
