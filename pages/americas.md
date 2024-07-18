@@ -10,7 +10,7 @@ A placeholder page to direct to Americas region plays.
 
 A list of *Medea* receptions in the Americas. 
 
-- [Mojada](mojada), by Luis Alfaro
+- [Mojada](mojada-alfaro), by Luis Alfaro
 - Other Play
 - Other Play
 - Other Play
