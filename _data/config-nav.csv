@@ -1,5 +1,6 @@
 display_name,stub,dropdown_parent
 Home,/,
+Euripides,/euripides.html,
 Browse Locations,,
 Americas,/americas.html,Browse Locations
 Europe,/europe.html,Browse Locations
@@ -7,6 +8,4 @@ Browse Themes,,
 Priestess,/priestess.html,Browse Themes
 Princess,/princess.html,Browse Themes
 Map,/webmap.html,
-Timeline,/timeline.html,
 About,/about.html,
-Play,/mojada.html,
