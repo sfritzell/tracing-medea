@@ -1,7 +1,7 @@
 ---
 title: Mojada
 layout: about
-permalink: mojada.html
+permalink: mojada-alfaro.html
 ---
 
 # Mojada by Luis Alfaro
