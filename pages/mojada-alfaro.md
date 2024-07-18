@@ -14,7 +14,7 @@ permalink: mojada-alfaro.html
 
 In Luis' Alfaro's play Mojada, Medea, her husband Hason (Jason), their son Acan, and Tita (nurse), a woman who is a servant for Medea’s family have fled from Mexico to America due to tragic circumstances, and  have settled in Los Angeles. Living already for a year in Los Angeles (when the play opens), Medea finds it hard to assimilate being undocumented and traumatized by their flee. She stays at home sewing whereas Hason is eager to become a member of their new world. He soon advances from a day-labor worker to a contractor’s assistant who works long hours and is not home frequently. He eventually engages in a relationship with his boss, Armida (played by Marlene Forte), also an immigrant, but with a much less traumatic journey to America. The plot line is very close to Euripides' tragedy but Alfaro twists it in such a way that renders Medea's ancient story a stepping-stone to talk about the experience of Mexican immigrants in Los Angeles.
 
-<img src="https://static01.nyt.com/images/2019/07/17/arts/17mojada-1/17mojada-1-videoSixteenByNineJumbo1600.jpg" width="100%">
+<img src="https://static01.nyt.com/images/2019/07/17/arts/17mojada-1/17mojada-1-videoSixteenByNineJumbo1600.jpg" width="100%" alt="On a dark stage, 4 people cower, with a man standing over them.  All look towards a blinding light with anticipation and concern as they see the end of their immigration journey.">
 
 
 <br>
@@ -53,7 +53,8 @@ Similarly in Mojada, when Hason marries Armida and she announces that they are t
 
 When Luis Alfaro started "revisiting" Euripides' play in 2013, he was encouraged by Chay Yew, director of Mojada's production at the Public Theater to gather stories from undocumented immigrants to make Medea's story more fathomable, relatable, and relevant to the experiences of immigrant communities in the United States (especially the Mexican ones), and to better contextualize Medea's journey in modern-day America. The Colchian Medea, who immigrated to Corinth following Jason, became in Los Angeles, a heavily culturally Mexican city whose immigration population is largely comprised of Mexican immigrants, a Mexican woman driven by her struggle between home and the new land, tradition and assimilation, haunted by the cost of coming to a country that exploits her labor but rejects her culture. Euripides' Medea brought on the fifth-century Athenian stage a foreigner woman who voiced the hardship of the social status of females, foreigners/non-citizens, and outsiders; Alfaro's Mojada is a 21st century retelling of the similar hardships that Mexican immigrants face in the United States.
 
-<img src="https://www.pcs.org/assets/Mojada_Banner_750.jpg" width="100%">
+<img src="https://www.pcs.org/assets/Mojada_Banner_750.jpg" width="100%" alt="Three women on stage, the youngest one in front center holding high two banana leaves, the older women looking at her from behind.">
+
 
 **"On the contrary, he (Euripides) seems to exploit the theme of Medea's foreignness in order to emphasize her vulnerability and isolation and also to make a searching analysis of the nature of civilization and barbarism, a deep preoccupation of this play..." — P.E. Easterling**
 
