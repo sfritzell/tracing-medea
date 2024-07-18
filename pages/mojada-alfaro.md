@@ -25,7 +25,7 @@ Luis Alfaro, a Chicano writer, theater director, and social activist was born in
 
 These two questions lie at the core of Alfaro's Greek trilogy (*Electridad*, *Oedipus el Rey*, and *Mojada*) which sets mythic stories in a contemporary background and sheds a heroic/mythic light to 21st century Latino figures. His latest Greek-inspired play, Mojada, is a re-imagining of Euripides' Medea in which the protagonist is a young indigenous seamstress from Mexico who followed Jason across the border to the other America. Alfaro has claimed that "Medea may be the hardest Greek tragedy for modern audiences to understand" and thus he tried to make it more accessible to the contemporary immigrant-Mexican and American spectator. 
 
-<img src="https://www.uncsa.edu/kenan/img/news/aal-alfaro-banner.jpg" width="100%">
+{% include feature/video.html objectid="https://www.youtube.com/watch?v=rQO4TfeMrwE" width="50" caption="Greeks in the Barrio - A Conversation with Luis Alfaro" %}
 
 **"I call myself a citizen artist, because one of the things I do is try to get my playwrights — especially my graduate playwrights — interested in the world. It’s about how you connect art to culture and community here and now, and how we are vital to the expression of our community." — Luis Alfaro**, [*The Artist as Leader: Luis Alfaro*](https://www.uncsa.edu/kenan/artist-as-leader/luis-alfaro.aspx)
 
