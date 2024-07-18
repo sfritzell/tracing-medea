@@ -150,13 +150,13 @@ permalink: /webmap-js.html
         // Define layers with popup content
         function createLayer(className, customIcon) {
             return L.geoJSON(null, {
-                pointToLayer: function (feature, latlng) {
+               /* pointToLayer: function (feature, latlng) {
                     var marker = L.marker(latlng, { icon: customIcon || L.Icon.Default.prototype });
                     marker.on('add', function () {
                         marker._icon.classList.add(className);
                     });
                     return marker;
-                },
+                }, */
                 onEachFeature: function (feature, layer) {
                     if (feature.properties) {
                         var popupContent = '<h3>' + feature.properties.title + '</h3>' +
