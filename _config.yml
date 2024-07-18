@@ -22,10 +22,10 @@ source-code: https://github.com/sfritzell/tracing-medea
 # title of site appears in banner
 title: Tracing Medea
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: The Identity Journey of Euripides' Medea on the Modern Stage
+tagline: An Identity Journey on the Modern Stage
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "Tracing Medea is an animated archive of performances, places, and identity structures built on the values of visualization and mapping methodologies. Tracing Medea offers a digital spatio-cultural journey of the reception of Euripides’ Medea, one of the most widely staged and adapted ancient Greek tragedies in the modern world."
+description: "A spatio-cultural journey of the reception of Euripides’ Medea."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: sfritzell
 
