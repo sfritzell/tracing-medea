@@ -1,6 +1,5 @@
 ---
 title: Webmap JS
-layout: map
 permalink: /webmap-js.html
 ---
 
@@ -101,7 +100,7 @@ permalink: /webmap-js.html
         }).addTo(map);
 
     
-        var data = {{ site.data.Test-Medea-DataSet | jsonify }};
+        var data = {{ site.data.play-demo-metadata | jsonify }};
 
         //console.log("Data loaded:", data);
 
@@ -109,42 +108,41 @@ permalink: /webmap-js.html
         function addDataToLayers(data) {
             data.forEach(function (feature) {
                 // Check if required fields (subject, latitude, longitude) are present and not empty
-                if (feature.region && feature.lat && feature.long &&
-                    feature.region.trim() !== "" && feature.lat.trim() !== "" && feature.long.trim() !== "") {
+                if (feature.location && feature.latitude && feature.longitude &&
+                    feature.location.trim() !== "" && feature.latitude.trim() !== "" && feature.longitude.trim() !== "") {
 
                     var geojsonFeature = {
                         type: "Feature",
                         properties: {
-                            title: feature.play-title || "Unknown",
-                            author: feature.playwright || "Unknown",
-                            country: feature.country || "Unknown",
+                            title: feature.title || "Unknown",
+                            author: feature.creator || "Unknown",
                             date: feature.date || "Unknown",
-                            region: feature.region,
-                            summary: feature.summary || "No description provided"
+                            location: feature.location,
+                            summary: feature.description || "No description provided"
                         },
                         geometry: {
                             type: "Point",
-                            coordinates: [parseFloat(feature.lat), parseFloat(feature.long)]
+                            coordinates: [parseFloat(feature.latitude), parseFloat(feature.longitude)]
                         }
                     };
 
                     console.log("Processing feature:", geojsonFeature);
 
-                    var subject = feature.region.toLowerCase();
-                    if (subject === 'other') {
+                    var location = feature.location.toLowerCase();
+                    if (location === 'other') {
                         otherLayer.addData(geojsonFeature);
-                    } else if (subject === 'europe') {
+                    } else if (location === 'europe') {
                         europeLayer.addData(geojsonFeature);
-                    } else if (subject === 'america') {
+                    } else if (location === 'america') {
                         americasLayer.addData(geojsonFeature);
                     } else if (subject === 'unknown') {
                         unknownLayer.addData(geojsonFeature);
                     } else {
-                        console.warn("Unexpected subject:", subject);
+                        console.warn("Unexpected location:", location);
                         unknownLayer.addData(geojsonFeature); // Add to the unknown layer
                     }
                 } else {
-                    console.warn("Feature missing required fields (subject, latitude, or longitude):", feature);
+                    console.warn("Feature missing required fields (location, latitude, or longitude):", feature);
                 }
             });
         }
@@ -162,8 +160,8 @@ permalink: /webmap-js.html
                 onEachFeature: function (feature, layer) {
                     if (feature.properties) {
                         var popupContent = '<h3>' + feature.properties.title + '</h3>' +
-                            '<p><b>Address:</b> ' + feature.properties.author + '</p>' +
-                            '<p><b>Description:</b> ' + feature.properties.summary + '</p>' +
+                            '<p><b>Playwright:</b> ' + feature.properties.author + '</p>' +
+                            '<p><b>Description:</b> ' + feature.properties.description + '</p>' +
                             '<p><b>Year:</b> ' + feature.properties.date + '</p>';
                         layer.bindPopup(popupContent);
                     } else {
@@ -179,14 +177,11 @@ permalink: /webmap-js.html
         var europeLayer = createLayer('Europe');
         var americasLayer = createLayer('Americas');
 
-
-
         //Add layers to map
         unknownLayer.addTo(map);
         otherLayer.addTo(map);
         europeLayer.addTo(map);
         americasLayer.addTo(map);
-
 
       //layers control
         var overlayLayers = {
@@ -196,7 +191,7 @@ permalink: /webmap-js.html
             "otherLayer": otherlayer
         };
 
-        L.control.layers(baseLayers, overlayLayers).addTo(map);
+        L.control.layers(null, overlayLayers).addTo(map);
 
         // Call function to add data to layers
         addDataToLayers(data);
