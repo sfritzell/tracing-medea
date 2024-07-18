@@ -9,12 +9,12 @@
 #
 # url is site domain, full URL to the production location of your collection
 # on GitHub Pages follows the pattern username.github.io
-#url: https://collectionbuilder.github.io 
-# baseurl is path to location on the domain if necessary e.g. /digital/hjccc
+#url: https://sfritzell.github.io 
+# baseurl is path to location on the domain if necessary e.g. /tracing-medea
 # on GitHub Pages it is your github repository's name prefixed with a /
 #baseurl: /collectionbuilder-gh 
 # location of code, the full url to your github repository
-source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
+source-code: https://github.com/sfritzell/tracing-medea
 
 ##########
 # SITE SETTINGS
@@ -22,12 +22,12 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-gh
 # title of site appears in banner
 title: Tracing Medea
 # tagline, a short phrase that will appear throughout the site in the top banner
-# tagline: a template for creating simple digital exhibits
+tagline: The Identity Journey of Euripides' Medea on the Modern Stage
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-# description: "CollectionBuilder-GH is a template for creating small digital collection exhibits on GitHub Pages designed for teaching digital library skills"
+description: "Tracing Medea is an animated archive of performances, places, and identity structures built on the values of visualization and mapping methodologies. Tracing Medea offers a digital spatio-cultural journey of the reception of Euripides’ Medea, one of the most widely staged and adapted ancient Greek tragedies in the modern world."
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-# author: CollectionBuilder
+author: sfritzell
 
 ##########
 # COLLECTION SETTINGS

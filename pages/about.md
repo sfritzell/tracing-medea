@@ -8,20 +8,13 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %}
+## About this Project
 
-{% include feature/nav-menu.html sections="About the Collection;About the About Page" %}
+*Tracing Medea* is an animated archive of performances, places, and identity structures built on the values of visualization and mapping methodologies. *Tracing Medea* offers a digital spatio-cultural journey of the reception of Euripides’ *Medea*, one of the most widely staged and adapted ancient Greek tragedies in the modern world. Medea has been characterized as the most theatrical of all Greek tragic characters and a heroine who has been fascinating audiences for more than two thousand years. The complexity of her ethnic, social, and gendered identity, her Otherness, character, actions, and tragic story have long inspired the imagination of artists worldwide, sparking discussions on matters of inclusivity and belonging.
 
-## About the Collection
+More information about the project can go here. 
 
-This site is generated using [CollectionBuilder-GH](https://collectionbuilding.github.io/gh/), a project to create a free and simple digital collection using [GitHub Pages](https://pages.github.com/) from: 
+## About the Site
+This site is generated using [CollectionBuilder-GH](https://collectionbuilding.github.io/gh/), a project to create a free and simple digital collection using [GitHub Pages](https://pages.github.com/).
 
-- a CSV of collection metadata
-- a folder of JPG images or PDF documents
-
-The template repository features four objects from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital). 
-
-For full details of creating your own collection site, visit [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/)!
-
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+Initial construction of this site took place during the 2024 ILiADS institute at Emory University. Subsequent work and maintainence has occured ... 

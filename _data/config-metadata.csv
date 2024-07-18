@@ -1,13 +1,14 @@
 field,display_name,browse_link,external_link
 title,Title,
-creator,Creator,
-date,Date Created,
-description,Description,
+creator,Playwright,
+date,Date,
+description,Summary,
 subject,Subjects,true
-location,Location
-latitude,Latitude
-longitude,Longitude
-source,Source
+location,Region,
+city-country,Place,
+latitude,Latitude,
+longitude,Longitude,
+source,Source,,true
 identifier,Source Identifier,,
 type,Type,
 format,Format,
