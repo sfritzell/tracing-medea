@@ -1,6 +1,6 @@
 ---
 title: Sample Play Page
-layout: default
+layout: about
 ---
 
 **(Note: This is a template for the play pages. Copy the code and paste into a new page and name it with the title of the play and last name of the playwright separated with dashes, and followed by .md, e.g. mojada-alfaro.md)**
