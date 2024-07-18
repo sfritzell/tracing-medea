@@ -1,6 +1,5 @@
 ---
 title: Webmap JS
-layout: map
 permalink: /webmap-js.html
 ---
 
@@ -26,52 +25,6 @@ permalink: /webmap-js.html
             height: 100%;
             width: 100%;
         }
-
-        .descrip {
-            width: 250px;
-            font-size: 16px;
-            font-family: "Open Sans", Helvetica, sans-serif;
-            padding: 10px 14px;
-            background-color: #FFFFFF;
-            border-radius: 5px;
-            border: 5px solid #D3D3D3;
-            display: none;
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            z-index: 1000;
-            /* Ensure it's above the map */
-        }
-
-        .descrip.visible {
-            display: block;
-        }
-
-        .trigger-zone {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-            z-index: 1000;
-        }
-
-        .americas {
-            filter: hue-rotate(0deg);
-            /*blue*/
-        }
-
-        .europe {
-            filter: hue-rotate(180deg);
-            /*brown*/
-        }
-      
-        }
-        /* these colors can be changed by changing the number in the hue-rotate(), there must be no spaces between the number and deg, for more options see: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images */
-    .leaflet-tile {
-            background-color: transparent !important;
-        }
-    /*setting background to transparent for all layers*/
     </style>
 
 
@@ -95,13 +48,13 @@ permalink: /webmap-js.html
         });
        
       //base map
-        const openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors',
-            maxZoom: 19
-        }).addTo(map);
+        const openStreetMap = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+				subdomains: 'abcd',
+				maxZoom: 18
+			}).addTo(map);
 
-    
-        var data = {{ site.data.Test-Medea-DataSet | jsonify }};
+        var data = {{ site.data.play-demo-metadata | jsonify }};
 
         //console.log("Data loaded:", data);
 
@@ -109,42 +62,41 @@ permalink: /webmap-js.html
         function addDataToLayers(data) {
             data.forEach(function (feature) {
                 // Check if required fields (subject, latitude, longitude) are present and not empty
-                if (feature.region && feature.lat && feature.long &&
-                    feature.region.trim() !== "" && feature.lat.trim() !== "" && feature.long.trim() !== "") {
+                if (feature.location && feature.latitude && feature.longitude &&
+                    feature.location.trim() !== "" && feature.latitude.trim() !== "" && feature.longitude.trim() !== "") {
 
                     var geojsonFeature = {
                         type: "Feature",
                         properties: {
-                            title: feature.play-title || "Unknown",
-                            author: feature.playwright || "Unknown",
-                            country: feature.country || "Unknown",
+                            title: feature.title || "Unknown",
+                            author: feature.creator || "Unknown",
                             date: feature.date || "Unknown",
-                            region: feature.region,
-                            summary: feature.summary || "No description provided"
+                            location: feature.location,
+                            summary: feature.description || "No description provided"
                         },
                         geometry: {
                             type: "Point",
-                            coordinates: [parseFloat(feature.lat), parseFloat(feature.long)]
+                            coordinates: [parseFloat(feature.latitude), parseFloat(feature.longitude)]
                         }
                     };
 
                     console.log("Processing feature:", geojsonFeature);
 
-                    var subject = feature.region.toLowerCase();
-                    if (subject === 'other') {
+                    var location = feature.location.toLowerCase();
+                    if (location === 'other') {
                         otherLayer.addData(geojsonFeature);
-                    } else if (subject === 'europe') {
+                    } else if (location === 'europe') {
                         europeLayer.addData(geojsonFeature);
-                    } else if (subject === 'americas') {
+                    } else if (location === 'america') {
                         americasLayer.addData(geojsonFeature);
                     } else if (subject === 'unknown') {
                         unknownLayer.addData(geojsonFeature);
                     } else {
-                        console.warn("Unexpected subject:", subject);
+                        console.warn("Unexpected location:", location);
                         unknownLayer.addData(geojsonFeature); // Add to the unknown layer
                     }
                 } else {
-                    console.warn("Feature missing required fields (subject, latitude, or longitude):", feature);
+                    console.warn("Feature missing required fields (location, latitude, or longitude):", feature);
                 }
             });
         }
@@ -152,18 +104,18 @@ permalink: /webmap-js.html
         // Define layers with popup content
         function createLayer(className, customIcon) {
             return L.geoJSON(null, {
-                pointToLayer: function (feature, latlng) {
+               /* pointToLayer: function (feature, latlng) {
                     var marker = L.marker(latlng, { icon: customIcon || L.Icon.Default.prototype });
                     marker.on('add', function () {
                         marker._icon.classList.add(className);
                     });
                     return marker;
-                },
+                }, */
                 onEachFeature: function (feature, layer) {
                     if (feature.properties) {
                         var popupContent = '<h3>' + feature.properties.title + '</h3>' +
-                            '<p><b>Address:</b> ' + feature.properties.author + '</p>' +
-                            '<p><b>Description:</b> ' + feature.properties.summary + '</p>' +
+                            '<p><b>Playwright:</b> ' + feature.properties.author + '</p>' +
+                            '<p><b>Description:</b> ' + feature.properties.description + '</p>' +
                             '<p><b>Year:</b> ' + feature.properties.date + '</p>';
                         layer.bindPopup(popupContent);
                     } else {
@@ -179,14 +131,11 @@ permalink: /webmap-js.html
         var europeLayer = createLayer('Europe');
         var americasLayer = createLayer('Americas');
 
-
-
         //Add layers to map
         unknownLayer.addTo(map);
         otherLayer.addTo(map);
         europeLayer.addTo(map);
         americasLayer.addTo(map);
-
 
       //layers control
         var overlayLayers = {
@@ -196,7 +145,7 @@ permalink: /webmap-js.html
             "otherLayer": otherlayer
         };
 
-        L.control.layers(baseLayers, overlayLayers).addTo(map);
+        L.control.layers(null, overlayLayers).addTo(map);
 
         // Call function to add data to layers
         addDataToLayers(data);
