@@ -3,7 +3,7 @@ layout: about
 title: Home
 ---
 
-{% include feature/image.html objectid="{{ site.baseurl }}/assets/img/homepage-banner.jpg" width="100" alt="image collage of Medea productions" %}
+{% include feature/image.html objectid="assets/img/homepage-banner.jpg" width="100" alt="image collage of Medea productions" %}
 
 # Tracing Medea
 
