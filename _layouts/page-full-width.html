@@ -1,20 +1,7 @@
 ---
 # Sets page in container-fluid to fill window with min gutter
 layout: default
-custom-foot: js/map-js.html
 ---
 <div class="container-fluid my-4">
-    <div class="col-md-12">
-        {{ content }}
-    </div>
-    
-    <div class = "col-md-12">
-        <iframe src='{{ site.baseurl }}/{{ _includes/js/map-js.html }}' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
-    </div>
+    {{ content }}
 </div>
-
-<!--
-    <div id="map">
-        <script src="{{ base.url }}/_includes/js/map-js.html"></script>
-    </div>
---> 
