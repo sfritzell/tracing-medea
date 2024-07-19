@@ -1,5 +1,5 @@
 ---
-layout: page-full-width
+layout: page-map
 title: Home
 ---
 
